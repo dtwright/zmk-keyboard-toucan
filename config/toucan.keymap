@@ -2,12 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-
-#define BASE   0
-#define PC     1
-#define LOWER  2
-#define RAISE  3
-#define ADJUST 4
+#include "layer-defs.h"
 
 / {
        behaviors {
@@ -50,7 +45,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp SQT
    &tp LGUI TAB   &kp A &kp S &tp LCTRL D &tp LALT F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RCTRL
    &tp LSHFT LPAR &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &tp RSHFT RPAR
-                    &kp LALT &mo RAISE &kp RET   &kp SPACE &tl LOWER BSPC &kp LALT
+                    &kp LALT &mo RAISE &tl MOUSE RET   &tl MOUSE SPACE &tl LOWER BSPC &kp LALT
             >;
         };
 
@@ -94,8 +89,14 @@
                         >;
         };
 
-        extra_2 {
-                status = "reserved";
+        mouse {
+               display-name = "MSE";
+               bindings = <
+    &kp ESC &none &none &none &none &none &none &none &none &none &none &none 
+    &none &none &none &none &none &none &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none &none
+    &none &none &none &none &none &none &kp HOME &kp PG_DN &kp PG_UP &kp END   &none &none
+    &none &none &none                                                &none     &none &none 
+                        >;
         };
 
         extra_3 {
