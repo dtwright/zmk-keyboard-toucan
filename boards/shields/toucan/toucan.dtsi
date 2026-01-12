@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
-#include <layer-defs.h>
 
 
 / {
@@ -110,7 +109,7 @@
         device = <&glidepoint_split>;
         input-processors = <&zip_xy_scaler 250 100>;
         scroller {
-            layers = <LOWER RAISE MOUSE>;
+            layers = <2 3 5>;
             input-processors = <
                 &zip_xy_to_scroll_mapper
                 &zip_scroll_scaler 1 5
