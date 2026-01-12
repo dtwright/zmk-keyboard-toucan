@@ -50,7 +50,7 @@
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp SQT
    &tp LGUI TAB   &kp A &kp S &tp LCTRL D &tp LALT F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp RCTRL
    &tp LSHFT LPAR &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &tp RSHFT RPAR
-                    &kp LALT &mo RAISE &tl MOUSE RET   &tl MOUSE SPACE &tl LOWER BSPC &kp LALT
+                    &kp LALT &mo RAISE &kp RET   &kp SPACE &tl LOWER BSPC &kp LALT
             >;
         };
 
