@@ -95,14 +95,6 @@
 };
 
 / {
-    &zip_gestures {
-        tap-detection;
-
-        inertial-cursor;
-
-        circular-scroll;
-    };
-
     split_inputs {
         #address-cells = <1>;
         #size-cells = <0>;
@@ -114,6 +106,11 @@
     };
 
     glidepoint_listener: glidepoint_listener {
+        &zip_gestures {
+            tap-detection;
+            inertial-cursor;
+            circular-scroll;
+        };
         compatible = "zmk,input-listener";
         status = "disabled";
         device = <&glidepoint_split>;
