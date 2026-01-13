@@ -95,6 +95,13 @@
 };
 
 / {
+    zip_gestures {
+        compatible = "zmk,input-listener";
+        tap-detection;
+        inertial-cursor;
+        circular-scroll;
+    };
+
     split_inputs {
         #address-cells = <1>;
         #size-cells = <0>;
@@ -104,15 +111,6 @@
             reg = <0>;
         };
     };
-
-	glidepoint_gestures {
-        compatible = "zmk,input-listener";
-	    &zip_gestures {
-            tap-detection;
-            inertial-cursor;
-            circular-scroll;
-        };
-	};
 
     glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
