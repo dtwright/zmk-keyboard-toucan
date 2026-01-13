@@ -94,21 +94,15 @@
     };
 };
 
-&zip_gestures {
-    // Activate gestures and change their configuration as you see fit.
-    // for details, see the section below that describes all gestures and
-    // their configuration options.
-    
-    // This will create a mouseclick if your touch is short enough.
-    // if you're running in relative mode and don't use no-taps, this might
-    // result in duplicate taps
-    tap-detection;
-
-	inertial-cursor;
-	circular-scroll;
-};
-
 / {
+    &zip_gestures {
+        tap-detection;
+
+        inertial-cursor;
+
+        circular-scroll;
+    };
+
     split_inputs {
         #address-cells = <1>;
         #size-cells = <0>;
@@ -124,7 +118,7 @@
         status = "disabled";
         device = <&glidepoint_split>;
         input-processors = <
-			&zip_gestures
+            &zip_gestures
             &zip_absolute_to_relative
             &zip_xy_scaler 130 100
         >;
