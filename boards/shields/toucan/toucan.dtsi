@@ -105,12 +105,16 @@
         };
     };
 
-    glidepoint_listener: glidepoint_listener {
-        &zip_gestures {
+	glidepoint_gestures {
+        compatible = "zmk,input-listener";
+	    &zip_gestures {
             tap-detection;
             inertial-cursor;
             circular-scroll;
         };
+	};
+
+    glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
         device = <&glidepoint_split>;
