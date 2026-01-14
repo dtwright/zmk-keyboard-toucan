@@ -10,15 +10,19 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: halfdane
       url-base: https://github.com/halfdane
+    - name: amgskobo
+      url-base: https://github.com/amgskobo
+    - name: oleksandrmaslov
+      url-base: https://github.com/oleksandrmaslov
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
     - name: zmk-input-gestures
-      remote: halfdane
+      remote: oleksandrmaslov
       revision: main
     - name: zmk-input-processors
-      remote: halfdane
+      remote: amgskobo
       revision: main
     - name: cirque-input-module
       remote: halfdane
