@@ -95,8 +95,7 @@
 };
 
 / {
-    zip_gestures {
-        compatible = "zmk,input-listener";
+    &zip_gestures {
         tap-detection;
         inertial-cursor;
         circular-scroll;
