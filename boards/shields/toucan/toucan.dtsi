@@ -94,13 +94,13 @@
     };
 };
 
+&zip_gestures {
+    tap-detection;
+    inertial-cursor;
+    circular-scroll;
+};
+ 
 / {
-    &zip_gestures {
-        tap-detection;
-        inertial-cursor;
-        circular-scroll;
-    };
-
     split_inputs {
         #address-cells = <1>;
         #size-cells = <0>;
